@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useId, useState } from "react";
+import { Navbar } from "./components/NavBar";
+import TodoList from "./components/TodoList";
+import { v4 } from "uuid";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const primaryColor = "#4263eb";
+    const [todoLists, setTodoList] = useState([
+        {
+            title: "this is a list",
+            id: v4(),
+        },
+    ]);
+
+    return (
+        <div>
+            <Navbar color={primaryColor}></Navbar>
+            <TodoList color={primaryColor} todoList={todoLists[0]}></TodoList>
+        </div>
+    );
 }
 
 export default App;
