@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createGlobalStyle } from "styled-components";
-
+import { lighten } from "polished";
 import App from "./App";
 const GlobalStyles = createGlobalStyle`
 * {
@@ -19,6 +19,7 @@ body {
     font-family: 'Poppins',sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    background-color: ${lighten("0.4", "#4263eb")};
 }
 `;
 const root = ReactDOM.createRoot(document.getElementById("root"));

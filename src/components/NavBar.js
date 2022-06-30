@@ -16,10 +16,7 @@ const NavbarContainer = styled.nav`
 export const Navbar = (props) => {
     return (
         <NavbarContainer color={props.color}>
-            <Button
-                color={props.color}
-                onClick={() => console.log("clickeddd")}
-            >
+            <Button color={props.color} onClick={() => props.onAddNewList()}>
                 + Create a new list
             </Button>
             <Button

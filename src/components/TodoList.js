@@ -6,7 +6,7 @@ import { useState } from "react";
 const TodoListStyles = styled.div`
     width: 50rem;
     box-shadow: 0 0 5px 10px ${(props) => transparentize(0.8, props.color)};
-    padding: 5rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
