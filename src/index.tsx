@@ -22,7 +22,7 @@ body {
     background-color: ${lighten("0.4", "#4263eb")};
 }
 `;
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(
     <React.Fragment>
         <GlobalStyles />

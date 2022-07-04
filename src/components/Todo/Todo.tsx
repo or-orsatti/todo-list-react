@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 const TodoStyles = styled.li`
     border: 2px solid ${(props) => props.color};
-    padding: 1.5rem;
+    padding: 0.5em;
     border-radius: 5px;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: ${(props) => props.color};
     cursor: pointer;
     &:hover {
@@ -14,7 +14,12 @@ const TodoStyles = styled.li`
     }
 `;
 
-export default function Todo(props) {
+type todoProps = {
+    color: string;
+    onRemoveTodo: (e: any) => void;
+    title: string;
+};
+export default function Todo(props: todoProps) {
     return (
         <TodoStyles color={props.color} onClick={props.onRemoveTodo}>
             {props.title}
